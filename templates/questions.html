@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../img/mennsetukan2ri.png">
+    <img src="../img/mennsetukan2ri.png">
+    <!-- 変数nameに値があるとき -->
+    {% if content %}
+    {{ content }}
+    {% endif %}
+      <div id="remain"></div>
+    <script>
+      function countdown(){
+          var count = 1;
+ 
+      var countdownid = setInterval(function(){
+                  remain.innerHTML=count;
+                  count --;
+          if(count<-1){
+             clearInterval(countdownid);
+             remain.innerHTML="";
+             }
+      } ,1000);
+      }
+      countdown()
+    </script>
+    <form action="/challenge" method="post" class="form-inline">
+        <button type="submit" id="suuzi" name="suuzi" class="btn btn-success">次の質問へ</button>
+    </form>
+</body>
+
+</html>
